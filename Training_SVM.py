@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
 
 print("....Reading DataSet and Creating Pandas DataFrame....")
-alphabet_data = pd.read_csv("/home/pi/Desktop/programs/harryPotterOpencv/A_ZHandwrittenData.csv") # enter path of the saved .csv dataset file
+alphabet_data = pd.read_csv("A_ZHandwrittenData.csv") # enter path of the saved .csv dataset file
 print("...DataFrame Created...")
 
 
@@ -46,5 +46,5 @@ print("Accuracy of the model is:  ")
 print(accuracy)
 
 print("...Saving the trained model...")
-joblib.dump(clf, "alphabet_classifier.xml", compress=3)
+joblib.dump(clf, "alphabet_classifier.pkl", compress=3)
 print("...Model Saved...")
